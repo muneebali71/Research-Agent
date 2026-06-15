@@ -1,0 +1,108 @@
+# ============================================================
+# Multi-Agent Research & Report Generation System
+# Requirements File
+# Python >= 3.11 recommended
+# ============================================================
+
+# ------------------------------------------------------------
+# Core LangChain / LangGraph
+# ------------------------------------------------------------
+langgraph
+langchain
+langchain-core
+langchain-anthropic
+langchain-community
+langchain-mcp-adapters
+langsmith
+
+# ------------------------------------------------------------
+# LangGraph Checkpoint (PostgreSQL persistence)
+# ------------------------------------------------------------
+langgraph-checkpoint-postgres
+
+# ------------------------------------------------------------
+# LLM Provider
+# ------------------------------------------------------------
+anthropic
+langchain-openai
+langchain-groq
+
+# ------------------------------------------------------------
+# Web Search
+# ------------------------------------------------------------
+tavily-python
+
+# ------------------------------------------------------------
+# MCP (Model Context Protocol)
+# ------------------------------------------------------------
+fastmcp
+mcp
+
+# ------------------------------------------------------------
+# PDF Parsing
+# ------------------------------------------------------------
+pypdf2
+pdfplumber
+pymupdf            # fitz — best for complex PDFs
+
+# ------------------------------------------------------------
+# Text Splitting / Embeddings
+# ------------------------------------------------------------
+tiktoken            # token counting for chunking
+sentence-transformers
+
+# ------------------------------------------------------------
+# Database — PostgreSQL
+# ------------------------------------------------------------
+sqlalchemy
+asyncpg            # async PostgreSQL driver
+alembic            # migrations
+psycopg2-binary     # sync driver (Alembic needs this)
+
+# ------------------------------------------------------------
+# Vector Store (optional — semantic deduplication)
+# ------------------------------------------------------------
+qdrant-client
+
+# ------------------------------------------------------------
+# API Backend
+# ------------------------------------------------------------
+fastapi
+uvicorn[standard]
+python-multipart    # file uploads
+httpx              # async HTTP client (Jina Reader etc.)
+
+# ------------------------------------------------------------
+# Auth & Security
+# ------------------------------------------------------------
+python-jose[cryptography]   # JWT tokens
+passlib[bcrypt]             # password hashing
+python-dotenv
+
+# ------------------------------------------------------------
+# Data Validation — Pydantic
+# ------------------------------------------------------------
+pydantic
+pydantic[email]     # EmailStr support
+pydantic-settings   # settings from .env
+
+# ------------------------------------------------------------
+# UI
+# ------------------------------------------------------------
+streamlit
+
+# ------------------------------------------------------------
+# Utilities
+# ------------------------------------------------------------
+python-dateutil
+aiofiles           # async file I/O for PDF uploads
+tenacity            # retry logic for API calls
+structlog          # structured logging
+rich               # pretty terminal output during dev
+
+# ------------------------------------------------------------
+# Testing & Evaluation
+# ------------------------------------------------------------
+pytest
+pytest-asyncio
+pytest-cov
