@@ -1,20 +1,9 @@
 
-# from langchain.agents import create_agent
-# from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
-# from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_core.output_parsers import StrOutputParser
-
-
-# from app.mcp_servers.websearch_server import web_search,scrap_url
-# from dotenv import load_dotenv
 import os
 from app.llm_model.llm import get_llm
 
-# from config import GROQ_API_KEY
-
-
-# load_dotenv()  # Load environment variables from .env file
 
 llm = get_llm()
 

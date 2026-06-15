@@ -1,5 +1,5 @@
 import asyncio
-from app.pipline.websearch_pipline import run_research_agent  # adjust import
+from app.graph.graph import run_research_agent
 
 async def main():
     topic = "latest Iran Israel war updates"
