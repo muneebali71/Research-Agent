@@ -1,41 +1,9 @@
-# from langchain.agents import create_agent
-# from app.llm_model.llm import get_llm
-
-# from app.mcp_servers.websearch_server import web_search,scrap_url
-
-
-
-# # llm = get_llm()
-
-# # websearch agent
-
-# def build_search_agent():
-
-
-#     return create_agent(
-#         model = get_llm(),
-#         tools = [web_search]
-#     )
-
-
-# # def build_reader_agent():
-
-
-# #     return create_agent(
-# #         model = get_llm(),
-# #         tools = [scrap_url]
-# #     )
-
-
-
-
-
-# app/Agents/websearcher.py
 from langchain_mcp_adapters.client import MultiServerMCPClient
-# from langgraph.prebuilt import create_react_agent
 from langchain.agents import create_agent
 from app.llm_model.llm import get_llm
+from langsmith import traceable
 
+@traceable(name = "build search agent")
 async def build_search_agent():
         client = MultiServerMCPClient({
             "websearch": {
