@@ -106,9 +106,7 @@ The diagram above is generated directly from the compiled LangGraph `StateGraph`
 ```
 app/
 ├── Agents/
-│   ├── citation.py
 │   ├── pdf_reader.py          # PDF ingestion (chunk + embed + index) and the RAG tool
-│   ├── quality_check.py
 │   ├── reader.py               # MCP client agent wired to scrap_url
 │   ├── supervisor.py            # Routing logic (chat / pdf / web / both)
 │   └── websearcher.py           # MCP client agent wired to web_search
